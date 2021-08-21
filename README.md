@@ -1,4 +1,4 @@
-# Ident -> Identicon Generator
+# Identicon Generator
 
 ### This is a project for the Elixir Bootcamp by Stephen Grider on Udemy
 
@@ -19,6 +19,6 @@ This app takes a string as input in the main function and outputs the identicon 
 
 ![elixir_png](./elixir.png)
 
-Please find some extensive documentation at: 
+Please find some extensive documentation at: https://damonspencerroberts.github.io/Elixir-Identicon-Generator/
 
 
