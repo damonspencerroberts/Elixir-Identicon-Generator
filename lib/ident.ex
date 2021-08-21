@@ -1,9 +1,23 @@
+# require IEx
+# IEx.pry
+
 defmodule Ident do
-  @spec main(any) :: :world
   def main(string) do
     string
     |> hash_string
     |> pick_color
+    |> create_grid
+  end
+
+  @spec create_grid(%Ident.Image{:hex => list}) :: list
+  def create_grid(%Ident.Image{hex: hex} = _image) do
+    chunked_list = hex
+    |> List.delete_at(length(hex) - 1)
+    |> Enum.chunk_every(3)
+    for chunk <- chunked_list do
+      [a, b, _c] = chunk
+      chunk ++ [a, b]
+    end
   end
 
   @spec hash_string(
