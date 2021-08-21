@@ -1,21 +1,24 @@
-# Ident
+# Ident -> Identicon Generator
 
-**TODO: Add description**
+### This is a project for the Elixir Bootcamp by Stephen Grider on Udemy
 
-## Installation
+** This is an Identicon Generator **
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `ident` to your list of dependencies in `mix.exs`:
+When you first sign up for github you are given an identicon, which
+is unique to every username. It takes a string as an input and creates a unique shaped image that is symetrical.
 
-```elixir
-def deps do
-  [
-    {:ident, "~> 0.1.0"}
-  ]
-end
-```
+This app takes a string as input in the main function and outputs the identicon image as a png file in the root of the project.
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/ident](https://hexdocs.pm/ident).
+##### Some Examples
+
+** damon.png **
+
+![damon_png](./damon.png)
+
+** elixir.png **
+
+![elixir_png](./elixir.png)
+
+Please find some extensive documentation at: 
+
 
