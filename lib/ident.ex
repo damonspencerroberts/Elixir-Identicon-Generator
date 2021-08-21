@@ -11,13 +11,17 @@ defmodule Ident do
 
   @spec create_grid(%Ident.Image{:hex => list}) :: list
   def create_grid(%Ident.Image{hex: hex} = _image) do
-    chunked_list = hex
-    |> List.delete_at(length(hex) - 1)
-    |> Enum.chunk_every(3)
-    for chunk <- chunked_list do
-      [a, b, _c] = chunk
-      chunk ++ [a, b]
-    end
+      hex
+      |> List.delete_at(length(hex) - 1)
+      |> Enum.chunk_every(3)
+      |> Enum.map(&create_row/1)
+      |> List.flatten
+      |> Enum.with_index
+  end
+
+  def create_row(chunk) do
+    [a, b, _c] = chunk
+    chunk ++ [a, b]
   end
 
   @spec hash_string(
